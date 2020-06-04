@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="5dp"
+    android:layout_margin="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.flaviofaria.kenburnsview.KenBurnsView
+            android:id="@+id/image_place_item_layout"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/title_place_item"
+            android:textSize="28sp"
+            android:layout_above="@id/rating_place_item"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Title"/>
+
+        <RatingBar
+            android:id="@+id/rating_place_item"
+            android:layout_above="@id/description_place_item"
+            android:rating="4"
+            android:layout_marginStart="20dp"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:progressTint="@color/yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/description_place_item"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Description"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
